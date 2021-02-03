@@ -27,7 +27,9 @@ The structure of a `war` file is well specified; it includes a directory named `
 The purpose of the `web.xml` file is to specify the servlet class and url pattern for which the servlet will process HTTP requests. The supplied file names the servlet `RabbitCounter` and declares that the servlet class is `se325.lab02.fibonacci.RabbitCounterServlet`. It also specifies that the servlet will process HTTP requests where the domain name has a `rabbit` suffix. Where the domain name prefix is `localhost`, requests of the form `http://localhost/rabbit` would be routed through to the `RabbitCounter` servlet.
 
 #### (a) Import the project
-Import the project into your IDE, following the same procedure in the previous lab.
+Import the project into your IDE, following the same procedure in the previous lab. After you configure the parent project as a maven project, you have to import the three child projects into the workspace. In order to do this, go to import->Maven->Existing maven project. Then, select only pom files of child projects to import as shown in the figure below. 
+
+![](eclipse-import.png)
 
 #### (b) Flesh out the POM file
 As part of the Maven build process, Maven can arrange for the packaged Web service to be deployed in an *embedded* servlet container. An embedded container is one that runs in the same process as the client (integration tests in this case) that will invoke the Web application hosted by the container.
@@ -86,7 +88,7 @@ If you get really stuck with configuring the plugins, look ahead to the project 
 To build and run the project, run Maven with the `verify` goal. This will compile, package (generating the WAR file), and run the integration tests on the deployed Web service. The integration tests should run without error.
 
 #### (d) Build and run the project on GitHub
-On Github, you can setup a CI-CD workflow to automatically build and test your project when you push the code. TO create a workflow, go to workflow tab on your github repository and choose `Java with Maven`. Github will generate a maven.yml file and allow you to edit. You can edit the maven command on the last line to specify the maven goal to run. You can test this workflow by pushing the code to your repository and see the log in the workflow tab.
+On Github, you can setup a CI-CD workflow to automatically build and test your project when you push the code. TO create a workflow, go to workflow tab on your github repository and choose `Java with Maven`. Github will generate a maven.yml file and allow you to edit. You can edit the maven command on the last line to specify the maven goal to run. Also, please make sure you use Java 11 for building as maven failsafe plugin require. You can test this workflow by pushing the code to your repository and see the log in the workflow tab.
 ![](github-workflow.png)
 
 #### (e) Reflect on the project
