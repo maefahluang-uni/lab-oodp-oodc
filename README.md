@@ -3,7 +3,7 @@ Lab - Servlets & JAX-RS
 
 Before you start
 ----------
-The purpose of this lab is to reinforce week 2's lecture material and to give you some practical experience with configuring and developing simple REST Web services. You will work with a servlet container, first directly with servlets and then with JAX-RS.
+The purpose of this lab is to give you some practical experience with configuring and developing simple REST Web services. You will work with a servlet container, first directly with servlets and then with JAX-RS.
 
 Begin by forking this repository, then cloning your fork onto your local machine.
 
