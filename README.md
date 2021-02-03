@@ -1,4 +1,4 @@
-SOFTENG 325 Lab 02 - Servlets & JAX-RS
+Lab - Servlets & JAX-RS
 ==========
 
 Before you start
@@ -82,10 +82,14 @@ The `httpConnector` specifies the port that the servlet container will listen on
 
 If you get really stuck with configuring the plugins, look ahead to the project for exercise two,  `se325-lab-02-parolee`. The POM for this configures the plugins as required for a different Web application project.
 
-#### (c) Build and run the project
+#### (c) Build and run the project locally
 To build and run the project, run Maven with the `verify` goal. This will compile, package (generating the WAR file), and run the integration tests on the deployed Web service. The integration tests should run without error.
 
-#### (d) Reflect on the project
+#### (d) Build and run the project on GitHub
+On Github, you can setup a CI-CD workflow to automatically build and test your project when you push the code. TO create a workflow, go to workflow tab on your github repository and choose `Java with Maven`. Github will generate a maven.yml file and allow you to edit. You can edit the maven command on the last line to specify the maven goal to run. You can test this workflow by pushing the code to your repository and see the log in the workflow tab.
+![](github-workflow.png)
+
+#### (e) Reflect on the project
 Study the code to ensure you understand it, and think about the following questions. Record your thoughts here and in your journal:
 
 - How does use of the servlet container and programming model simplify application development? Consider what would be involved if you had to write your own HTTP server.
