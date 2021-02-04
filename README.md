@@ -9,7 +9,7 @@ Begin by forking this repository, then cloning your fork onto your local machine
 
 Exercise One - Build the supplied Fibonacci Servlet application
 ----------
-The `se325-lab-02-fibonacci` project contains a Web application that is implemented using a servlet. The project includes:
+The `lab-servlet-fibonacci` project contains a Web application that is implemented using a servlet. The project includes:
 
 - `RabbitCounterServlet`, located in the `src/main/java` directory. This is a servlet that implements a REST Web service for manipulating numbers in the Fibonacci sequence. The servlet responds to HTTP GET requests to retrieve either a value at a particular position within the sequence, or all Fibonacci values known to the Web service. It responds to HTTP POST requests to generate and store values for specified positions within the sequence, and, for HTTP DELETE requests, it deletes the value at a specified sequence position.
 
@@ -24,7 +24,7 @@ The project is structured as a Maven single-module project, and includes the dir
 
 The structure of a `war` file is well specified; it includes a directory named `WEB-INF` that contains the `web.xml` file and two subdirectories: `classes` and `lib`. `classes` contains the Web application's compiled code and any other resources, and `lib` contains any third-party libraries (`jar` files). Since a `war` file has a well-defined structure, any servlet container, e.g. Jetty or Tomcat, can be used to host the Web application contained in the `war` file. You might want to view the contents of the Fibonacci `war` file once you've built the application - you'll be able to find it in the projects `target` folder once built, and can view it using any program capable of opening Zip archives, such as 7-Zip.
 
-The purpose of the `web.xml` file is to specify the servlet class and url pattern for which the servlet will process HTTP requests. The supplied file names the servlet `RabbitCounter` and declares that the servlet class is `se325.lab02.fibonacci.RabbitCounterServlet`. It also specifies that the servlet will process HTTP requests where the domain name has a `rabbit` suffix. Where the domain name prefix is `localhost`, requests of the form `http://localhost/rabbit` would be routed through to the `RabbitCounter` servlet.
+The purpose of the `web.xml` file is to specify the servlet class and url pattern for which the servlet will process HTTP requests. The supplied file names the servlet `RabbitCounter` and declares that the servlet class is `lab.servlet.fibonacci.RabbitCounterServlet`. It also specifies that the servlet will process HTTP requests where the domain name has a `rabbit` suffix. Where the domain name prefix is `localhost`, requests of the form `http://localhost/rabbit` would be routed through to the `RabbitCounter` servlet.
 
 #### (a) Import the project
 Import the project into your IDE, following the same procedure in the previous lab. After you configure the parent project as a maven project, you have to import the three child projects into the workspace. In order to do this, go to import->Maven->Existing maven project. Then, select only pom files of child projects to import as shown in the figure below. 
@@ -82,7 +82,7 @@ Other than what's described in the above web page, you need additional declarati
 
 The `httpConnector` specifies the port that the servlet container will listen on for incoming connection requests.
 
-If you get really stuck with configuring the plugins, look ahead to the project for exercise two,  `se325-lab-02-parolee`. The POM for this configures the plugins as required for a different Web application project.
+If you get really stuck with configuring the plugins, look ahead to the project for exercise two,  `lab-servlet-parolee`. The POM for this configures the plugins as required for a different Web application project.
 
 #### (c) Build and run the project locally
 To build and run the project, run Maven with the `verify` goal. This will compile, package (generating the WAR file), and run the integration tests on the deployed Web service. The integration tests should run without error.
@@ -121,7 +121,7 @@ Study the code to ensure you understand it, and think about the following questi
 
 Exercise Two - Build the supplied Parolee JAX-RS application
 ----------
-Project `se325-lab-02-parolee` is a simple JAX-RS project. It provides a REST Web service that allows clients (consumers) to retrieve, create, update and delete parolees.
+Project `lab-servlet-parolee` is a simple JAX-RS project. It provides a REST Web service that allows clients (consumers) to retrieve, create, update and delete parolees.
 
 From version 3.0 of the Servlet specification, servlet containers are JAX-RS aware. This means that they automatically load the JAX-RS servlet class (`HttpServletDispatcher`) at startup time. Since you are packaging a WAR project, you still need a `web.xml` file - but it can be empty as the servlet container knows which `Servlet` class to instantiate. Hence, the `web.xml` file for this project is empty.
  
@@ -150,7 +150,7 @@ Study how the JAX-RS API is used in this simple project. Consider & record:
 
 - The abstraction offered by the the JAX-RS framework over basic servlet programming.
 
-- Aspect(s) of the `se325-lab-02-parolee` project that you think could be better addressed by the JAX-RS framework.
+- Aspect(s) of the `lab-servlet-parolee` project that you think could be better addressed by the JAX-RS framework.
 
 ```
 
@@ -158,7 +158,7 @@ Study how the JAX-RS API is used in this simple project. Consider & record:
 
 Exercise Three - Develop a JAX-RS Concert service
 ----------
-Project `se325-lab-02-concert` is a partially complete JAX-RS project for a simple REST Web service that manages concerts. The project includes a skeleton Web service implementation (`ConcertResource`), an integration test (`ConcertResourceIT`), a class to represent concerts (`Concert`) and a complete POM. 
+Project `lab-servlet-concert` is a partially complete JAX-RS project for a simple REST Web service that manages concerts. The project includes a skeleton Web service implementation (`ConcertResource`), an integration test (`ConcertResourceIT`), a class to represent concerts (`Concert`) and a complete POM. 
 
 The service is to provide the following REST interface:
 
@@ -173,7 +173,7 @@ The service is to provide the following REST interface:
 Instead of using JSON (as with the Parolee service), this service is to use Java serialization as the format for exchanging `Concert` data in HTTP request and response message bodies. In addition, the service is to track a client session using a HTTP cookie.
 
 #### Complete the application
-Begin by importing the `se325-lab-02-concert` project into your IDE. Complete the application service, implementing the necessary `Application` subclass and fleshing out the `ConcertResource` class. For `ConcertResource`, you need to add instance variables, method bodies and all metadata (JAX-RS annotations).
+Begin by importing the `lab-servlet-concert` project into your IDE. Complete the application service, implementing the necessary `Application` subclass and fleshing out the `ConcertResource` class. For `ConcertResource`, you need to add instance variables, method bodies and all metadata (JAX-RS annotations).
 
 ###### Use of Java serialization
 The JAX-RS framework is extensible with respect to data formats (more on this in Lecture 05). For this project, a class named `SerializedMessageBodyReaderAndWriter` is provided that plugs into the JAX-RS framework and which manages the conversion of serialized data in HTTP message bodies to `Serializable` Java objects. You don't need to be familiar with the details of this class' implementation - suffice it implements two JAX-RS interfaces `MessageBodyReader` and `MessageBodyWriter`. Any implementation of these interfaces can be registered with the JAX-RS framework to manage conversion between some format and Java objects.
@@ -196,13 +196,13 @@ public Set<Class<?>> getClasses() {
 
 When the JAX-RS runtime loads your `Application` subclass on startup, it calls both the `getSingletons()` and `getClasses()` methods. It instantiates classes obtained from `getClasses()` as necessary, and in the case of `SerializedMessageBodyReaderAndWriter`, it uses an instance to convert Java objects to and from their bytecode representations when reading and writing HTTP messages. Note that your `Application` subclass must also override `getSingletons()` to return an instance of `ConcertResource` - as discussed in lectures.
 
-Using the registered `MessageBodyReader` and `MessageBodyWriter` support for the Java serialization format means that you don't need to manually parse and generate the payload data for the HTTP request and response messages (as with project `se325-lab-02-parolee`). The `Concert` objects being exchanged between consumers and the service will automatically be converted to their byte-representation. Despite being a text-based protocol, HTTP can store binary data in HTTP message bodies.
+Using the registered `MessageBodyReader` and `MessageBodyWriter` support for the Java serialization format means that you don't need to manually parse and generate the payload data for the HTTP request and response messages (as with project `lab-servlet-parolee`). The `Concert` objects being exchanged between consumers and the service will automatically be converted to their byte-representation. Despite being a text-based protocol, HTTP can store binary data in HTTP message bodies.
 
 `SerializedMessageBodyReaderAndWriter` defines a new MIME type:
 
 - `application/java-serialization`
 
-The client (`ConcertResourceIT`), when preparing a Web service request, specifies this as its preferred content type. Similarly, in `ConcertResource`, you should use appropriate metadata annotations to specify that methods that produce or consume content do so using this data format. As you can see in `ConcertResource`, the method signatures are written to use class `Concert` directly - unlike the `se325-lab-02-parolee` project, there's no need to use stream I/O.
+The client (`ConcertResourceIT`), when preparing a Web service request, specifies this as its preferred content type. Similarly, in `ConcertResource`, you should use appropriate metadata annotations to specify that methods that produce or consume content do so using this data format. As you can see in `ConcertResource`, the method signatures are written to use class `Concert` directly - unlike the `lab-servlet-parolee` project, there's no need to use stream I/O.
 
 ###### Stateless communication protocol
 As discussed in class, HTTP is a stateless protocol. A JAX-RS Web service thus processes each incoming request without knowledge of earlier requests. The Concert Web service is required to track each client that is making requests of the service, and should recognise when requests are being made by the same client. Hence, each client is to be assigned a unique identity by the service, and should include this identity as part of each HTTP request.
@@ -217,7 +217,7 @@ In developing class `ConcertResource`, you should read the JAX-RS API Javadoc, i
 - `javax.ws.rs.core.Cookie`
 - `javax.ws.rs.core.NewCookie`
 
-Studying the `se325-lab-02-parolee` project will be helpful too. In addition, have a look at the `ConcertResourceIT` class, and be sure to read the comments in the `ConcertResource` class.
+Studying the `lab-servlet-parolee` project will be helpful too. In addition, have a look at the `ConcertResourceIT` class, and be sure to read the comments in the `ConcertResource` class.
 
 Javadoc documentation for JAX-RS (which is part of Java Enterprise Edition) is available at:
 
