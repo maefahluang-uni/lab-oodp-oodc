@@ -89,7 +89,7 @@ If you get really stuck with configuring the plugins, look ahead to the project 
 To build and run the project, run Maven with the `verify` goal. This will compile, package (generating the WAR file), and run the integration tests on the deployed Web service. The integration tests should run without error.
 
 #### (d) Build and run the project on GitHub
-On Github, you can setup a CI-CD workflow to automatically build and test your project when you push the code. TO create a workflow, go to workflow tab on your github repository and choose `Java with Maven`. Github will generate a maven.yml file and allow you to edit. You can edit the maven command on the last line to specify the maven goal to run. Also, please make sure you use Java 11 for building as maven failsafe plugin require. You can test this workflow by pushing the code to your repository and see the log in the workflow tab.
+On Github, you can setup a CI-CD workflow to automatically build and test your project when you push the code. TO create a workflow, go to workflow tab on your github repository and choose `Java with Maven`. Github will generate a maven.yml file and allow you to edit. You can edit the maven command on the last line to specify the maven goal to run. Also, please make sure to use Java 11 for building as maven failsafe plugin require. To test this workflow, you can push the code to your repository and see the log in the workflow tab.
 ![](github-workflow.png)
 
 #### (e) Reflect on the project
