@@ -59,6 +59,7 @@ Other than what's described in the above web page, you need additional declarati
         </httpConnector>
         <scanIntervalSeconds>10</scanIntervalSeconds>
         <stopPort>9000</stopPort>
+        <stopWait>10</stopWait>
         <stopKey>STOP</stopKey>
     </configuration>
     <executions>
