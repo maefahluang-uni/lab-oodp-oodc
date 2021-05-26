@@ -1,4 +1,4 @@
-Lab - Servlets & JAX-RS
+Lab - Webservice
 ==========
 
 Before you start
