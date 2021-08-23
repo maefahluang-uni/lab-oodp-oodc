@@ -94,25 +94,13 @@ On Github, you can setup a CI-CD workflow to automatically build and test your p
 #### (e) Reflect on the project
 Study the code to ensure you understand it, and think about the following questions. Record your thoughts here and in your journal:
 
-- How does use of the servlet container and programming model simplify application development? Consider what would be involved if you had to write your own HTTP server.
-
-```
-
-```
-
-- In what way is servlet programming still "low-level" programming? 
-
-```
-
-```
 
 - How does the servlet leverage the HTTP protocol?
 
 ```
 
 ```
-
-- Why is the servlet's state (`cache`) a threadsafe `Map`?
+- In what way is servlet programming still "low-level" programming for web service? 
 
 ```
 
