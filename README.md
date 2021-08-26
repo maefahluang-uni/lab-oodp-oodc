@@ -116,7 +116,7 @@ From version 3.0 of the Servlet specification, servlet containers are JAX-RS awa
 JBoss' RESTEasy implementation of JAX-RS is used, and several necessary dependencies are specified in the POM.
 
 #### (a) Import, build and run the project
-The project is complete and ready to build. Import the project into your IDE. Build and run the project, similarly to how you did for exercise one.
+The project is complete and ready to build. Import the project into your IDE. Build and run the project, similarly to how you did for exercise one. You can run with maven'goal ` verify` to build and test the project. Also, you can run a standalone server using `jetty:run` goal.  
 
 #### (b) Experiment with logging
 The project's POM file includes additional dependencies for logging, including the log4j implementation. The behaviour of log4j is configured using the `log4j.properties` file. A sample file is included with the project in `src/main/resources`. 
