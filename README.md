@@ -133,3 +133,11 @@ Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
 ```
+
+Submit this lab
+------------------
+You can submit this lab by simply pushing the code to the Github. On Eclipse, right click on project/Team/Commit. Stage all changes by clicking on ++ icon, type in message and click Push button.
+
+After you push the code, please make sure all code changes have been updated on Github's repository and "Github Action" runs successfully. This lab is marked automatically using "Github Action", which runs "maven verify" (as previously explained). To make sure you lab is sucessfully marked, on Github, click on Action tab and check if the green check icon apears as shown below.
+
+![Junit run](image/github-workflow.png)
