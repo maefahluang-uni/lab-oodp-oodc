@@ -39,5 +39,5 @@ Complete the methods in ComplexUtils.java
 
 After push
 ------------------
-Please make sure your project's classroom workflow is sucessfully executed. Please refer to the previous lab "Submit this lab".
+Please make sure your project's classroom workflow is successfully executed. Please refer to the previous lab "Submit this lab".
 
