@@ -37,4 +37,7 @@ Complete the methods in ComplexUtils.java
 5. Determine if the given string is a palindrome (case folded). You may use method to  reverse string in 3. to acommplish this.
 6.Generate a space separated list of all the prime numbers from 2 to the highest prime less than or equal to the given integer. For example, given 20 as num, the method would return 2 3 5 7 11 13 17 19
 
+After push
+------------------
+Please make sure your project's classroom workflow is sucessfully executed. Please refer to the previous lab "Submit this lab".
 
