@@ -49,7 +49,7 @@ Second Pattern
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 ```
 
-:rocket: ** Note: This exercise will be marked with TestPattern.java, please try to run and confirm the results with this test script.**
+:rocket: **Note: This exercise will be marked with TestPattern.java, please try to run and confirm the results with this test script.**
 
 Submit this lab
 ------------------
