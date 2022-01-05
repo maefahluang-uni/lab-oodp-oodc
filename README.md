@@ -31,13 +31,13 @@ Exercise Three - Complex Utility
 ---------------------
 Complete the methods in ComplexUtils.java
 1. Compare two names and if they are the same return "Same name", otherwise if they start with exactly the same letter return "Same first letter", otherwise return "No match".
-2. Determine if the given year is a leap year, which occurs once every four years. Leap year has 366 days including February 29 
+2. Determine if the given year is a leap year, which occurs once every four years. Leap year has 366 days including February 29. please follow this [link](https://www.wikihow.com/Calculate-Leap-Years) as a guideline to check.
 3. Return the given string in reverse order. For example, given 'hello' would return 'olleh'
-4. Determine if the given number is a prime number.
+4. Determine if the given number is a prime number. A prime number is a natural number greater than 1, which is only divisible by 1 and itself. 
 5. Determine if the given string is a palindrome (case folded). You may use method to  reverse string in 3. to acommplish this.
 6.Generate a space separated list of all the prime numbers from 2 to the highest prime less than or equal to the given integer. For example, given 20 as num, the method would return 2 3 5 7 11 13 17 19
 
-After push
+Submit this lab
 ------------------
-Please make sure your project's classroom workflow is successfully executed. Please refer to the previous lab "Submit this lab".
+Don't forget to push your project to Github. Please make sure your project's classroom workflow is successfully executed. You may refer to the previous lab "Submit this lab", as a guideline for checking submission.
 
