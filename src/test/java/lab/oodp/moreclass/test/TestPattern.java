@@ -1,4 +1,4 @@
-package lab.oodp.oop.test;
+package lab.oodp.moreclass.test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
