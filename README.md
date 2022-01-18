@@ -83,7 +83,8 @@ This is a famous name of my animal type: PharLap
 --------------------------------------------------------------
 ```
 Pleaes complete the following:
-- Complete the ​ **Bird** ​ and ​ **Dog** ​ classes that implement the interface ​ *IAnimal*​ . 
+- Complete the ​ **Bird** ​ and ​ **Dog** ​ classes that implement the interface ​ *IAnimal*​.
+:sparkles: *Hint: On Eclipse, you can automatically generate override methods by go to menu Source > Overide/Implement Methods* 
 - Complete the **Horse** ​ class that implements the interface ​ *IAnimal* ​ and another interface ​ *IFamous ​ which will be used to tell the user about the famous horse ​ "PharLap"​.
 - Create a simple application and call the method ​ processAnimalDetails(IAnimal[]
 list) which iterates through an array of animals and gives the example output. Note that
