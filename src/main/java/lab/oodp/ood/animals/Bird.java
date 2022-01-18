@@ -7,23 +7,5 @@ package lab.oodp.ood.animals;
  */
 public class Bird implements IAnimal {
 
-    @Override
-    public String sayHello() {
-        return "tweet tweet";
-    }
-
-    @Override
-    public boolean isMammal() {
-        return false;
-    }
-
-    @Override
-    public String myName() {
-        return "Tweety the bird";
-    }
-
-    @Override
-    public int legCount() {
-        return 2;
-    }
+   
 }

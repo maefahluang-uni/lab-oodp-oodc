@@ -7,23 +7,4 @@ package lab.oodp.ood.animals;
  */
 public class Dog implements IAnimal {
 
-    @Override
-    public String sayHello() {
-        return "woof woof";
-    }
-
-    @Override
-    public boolean isMammal() {
-        return true;
-    }
-
-    @Override
-    public String myName() {
-        return "Bruno the dog";
-    }
-
-    @Override
-    public int legCount() {
-        return 4;
-    }
 }

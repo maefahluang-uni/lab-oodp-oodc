@@ -7,28 +7,4 @@ package lab.oodp.ood.animals;
  */
 public class Horse implements IAnimal, IFamous {
 
-    @Override
-    public String famous() {
-        return "PharLap";
-    }
-
-    @Override
-    public String sayHello() {
-        return "neigh";
-    }
-
-    @Override
-    public boolean isMammal() {
-        return true;
-    }
-
-    @Override
-    public String myName() {
-        return "Mr. Ed the horse";
-    }
-
-    @Override
-    public int legCount() {
-        return 4;
-    }
 }
