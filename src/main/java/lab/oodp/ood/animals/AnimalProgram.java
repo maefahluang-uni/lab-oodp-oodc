@@ -19,7 +19,9 @@ public class AnimalProgram {
     private void processAnimalDetails(IAnimal[] list) {
         // TODO Loop through all the animals in the given list, and print their details as shown in the lab handout.
         // TODO If the animal also implements IFamous, print out that corresponding info too.
-    
+    	
+    	// TODO Use println below to break between each animal
+    	//System.out.println("--------------------------------------------------------------");
     }
 
     public static void main(String[] args) {
