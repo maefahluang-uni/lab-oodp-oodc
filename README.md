@@ -90,7 +90,7 @@ Pleaes complete the following:
 list) which iterates through an array of animals and gives the example output. Note that
 this method will call ​ myName​ , ​ sayHello​ , ​ isMammal​ , and ​ legCount ​ for each one of the
 animals. We also like to print famous names of animals if they exist. 
-:sparkles: *Hint: use ​ instanceof operator.*
+:sparkles: *Hint: use ​ `instanceof` operator.*
 
 
 
