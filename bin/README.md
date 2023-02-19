@@ -92,5 +92,5 @@ this method will call ​ myName​ , ​ sayHello​ , ​ isMammal​ , and �
 animals. We also like to print famous names of animals if they exist. 
 :sparkles: *Hint: use ​ `instanceof` operator.*
 
-**Don't forget to push the code**
+
 

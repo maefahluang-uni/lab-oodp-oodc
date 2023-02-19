@@ -36,18 +36,19 @@ public class TestAnimal {
 	    @Test
 	    public void testOutput() {
 	        cr.start();
-	        assertEquals("Tweety the bird says tweet tweet\n"
-	        		+ "Tweety the bird is a non-mammal\n"
-	        		+ "Did I forget to tell you that I have 2 legs?\n"
-	        		+ "--------------------------------------------------------------\n"
-	        		+ "Bruno the dog says woof woof\n"
-	        		+ "Bruno the dog is a mammal\n"
-	        		+ "Did I forget to tell you that I have 4 legs?\n"
-	        		+ "--------------------------------------------------------------\n"
-	        		+ "Mr. Ed the horse says neigh\n"
-	        		+ "Mr. Ed the horse is a mammal\n"
-	        		+ "Did I forget to tell you that I have 4 legs?\n"
-	        		+ "This is a famous name of my animal type: PharLap\n"
+	        String newline = System.getProperty("line.separator");
+	        assertEquals("Tweety the bird says tweet tweet"+newline
+	        		+ "Tweety the bird is a non-mammal"+newline
+	        		+ "Did I forget to tell you that I have 2 legs?"+newline
+	        		+ "--------------------------------------------------------------"+newline
+	        		+ "Bruno the dog says woof woof"+newline
+	        		+ "Bruno the dog is a mammal"+newline
+	        		+ "Did I forget to tell you that I have 4 legs?"+newline
+	        		+ "--------------------------------------------------------------"+newline
+	        		+ "Mr. Ed the horse says neigh"+newline
+	        		+ "Mr. Ed the horse is a mammal"+newline
+	        		+ "Did I forget to tell you that I have 4 legs?"+newline
+	        		+ "This is a famous name of my animal type: PharLap"+newline
 	        		+ "--------------------------------------------------------------", outContent.toString().trim());
 	    }
 
